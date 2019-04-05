@@ -4,10 +4,15 @@
 
 This program loads all data measured and generates a brief summary. In detail the following is happening:
 
-* The run_analysis.R program loads all the data from the train- and test-folders.
-
-* This data will be merged in only one file by run_analysis.R, additionally the columns will be named according to their statistical    contents, and an additional column with the name of the activities is merged.
-
-* From this file only the subject-, activities-, and means- and sd-columns are selected. The means-columns are a kind of "average", the sd-columns (sd=standard deviation) is a measure of variation. All these columns comprises numeric values, which were calculated from other measurement data earlier.
-
-* Finally for each participant/activity-pair the data is aggregated and only the means of the available data are calculated and saved in a cleaned file. This file is the result of the analysis.
+1.  Use read.table to read the data into R.
+2.  x_data contains the x train and x text which were combined in this order using rbind.
+3.  y_data and sub_data were created by reprsating Step 2 y train and y test, as well as sub train and sub test respectively. 
+4   all_data was created using cbind in the following order: sub_data, y_data, x_data
+5.  The features text file was loaded using read.table and assigned to avg_sd. The detail is in the Codebook
+6.  ext was created by subsetting means and stds out of avg_sd 
+7.  ext was used to subset all_data which removed all columns that were not avg and std resulting in ext_avg_sd.
+8.  Column names and activities were assigned to ext_avg_sd.
+9.  The melt function was used to convert from wide to long format, using subject and activities as the id.
+10. The dcast function was used to convert from long to wide format and calculating the mean of each activity for each subject.
+11. Melted the data again to tidy format.
+12. A text file named Warable tidy data was created.
