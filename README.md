@@ -1,5 +1,5 @@
 # WearableDataAnalysis
-##(This is for the Getting and Cleaning Data Course Final Project)
+## (This is for the Getting and Cleaning Data Course Final Project)
 
 
 This program loads all data measured and generates a brief summary. In detail the following is happening:
