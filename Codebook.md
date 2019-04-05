@@ -1,8 +1,12 @@
 # Codebook
 ## (This is to showcase the variables of the data)
-
 This file contains all the variables used and contained in the final file, and their meaning:
 
+### Identifiers
+* Subject: the test subject
+* Activity: the type of activity each test subject performed
+
+### Variables
 The first two variables are a "key" for the data, there is at most one record for each Subject/ActivityNr-pair.
 
 * "Subject": integer in 1:30, is the identity-number of one of the participants
@@ -79,3 +83,13 @@ The first number in the variable name denotes a reference to the original variab
 * "530-fBodyBodyGyroMag-std()"
 * "542-fBodyBodyGyroJerkMag-mean()"
 * "543-fBodyBodyGyroJerkMag-std()"
+
+### Activity Labels
+
+* WALKING: each subject was walking during the test
+* WALKING UPSTAIRS: each subject was walking up a staircase during test
+* WALKING DOWNSTAIRS: each subject was walking down a staircase during test
+* SITTING: each subject was sitting during the test
+* STANDING: each subject was standing during the test
+* LAYING: each subject was laying down during the test
+
